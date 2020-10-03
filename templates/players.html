@@ -1,0 +1,90 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center bg-success text-white  mb-3" id="total-orders">
+			  	<div class="card-header">
+			  		<h3 class="card-title">Total Players </h3>
+			  	</div>
+			  	<div class="card-body">
+			    	<h4 class="card-title">5</h4>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center bg-success text-white  mb-3" id="orders-delivered">
+			  	<div class="card-header">
+			  		<h3 class="card-title">Players Picked </h3>
+			  	</div>
+			  	<div class="card-body">
+			    	<h4 class="card-title">Hello</h4>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center bg-success text-white  mb-3" id="orders-pending">
+			  	<div class="card-header">
+			  		<h3 class="card-title">Players Left</h3>
+			  	</div>
+			  	<div class="card-body">
+			    	<h4 class="card-title">Hello</h4>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col ">
+		<h5>CUSTOMERS:</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="{% url 'home' %} ">Add Customer</a>
+			<table class="table table-sm">
+				<tr>
+
+					<th>Customer</th>
+					<th>Opener</th>
+					<th>Opener</th>
+					<th>Number 3</th>
+					<th>Number 4</th>
+
+				</tr>
+
+				{% for i in customers %}
+					<tr>
+						<td>{{i.name}}</td>
+						<td>{{i.slot1}}</td>
+						<td>{{i.slot2}}</td>
+						<td>{{i.slot3}}</td>
+						<td>{{i.slot4}}</td>
+				    </tr>
+				{% endfor %}
+
+
+
+
+			</table>
+		</div>
+	</div>
+
+	<!--<div class="col">
+		<img src="{% static 'images/bat.jfif' %}" width="300" height = "600">
+	</div>
+
+	<div class="col">
+		<img src="{% static 'images/ball.jfif' %}" width="200" height = "600">
+	</div>-->
+
+</div>
+{% endblock %}

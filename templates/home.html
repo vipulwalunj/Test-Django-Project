@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active ">
+      <img src="{% static 'images/cric.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <a class="btn btn-danger" href="{% url 'team' %}" role="button">Create Team</a>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+
+    <a href="{% url 'contact' %}" class="btn btn-dark">Give Feedback</a>
+  </div>
+
+</div>
+{% endblock %}
